@@ -1,0 +1,18 @@
+[package]
+name = "rocksdb"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+librocksdb-sys = "6"
+
+[features]
+default = ["static"]
+bzip2 = ["librocksdb-sys/bzip2"]
+lz4 = ["librocksdb-sys/lz4"]
+snappy = ["librocksdb-sys/snappy"]
+static = ["librocksdb-sys/static"]
+zlib = ["librocksdb-sys/zlib"]
+zstd = ["librocksdb-sys/zstd"]
